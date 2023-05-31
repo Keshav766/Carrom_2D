@@ -1,13 +1,17 @@
 # Carrom_2D
 
 1: First, I started a new 2D project in Unity and created the base of the game using the sprites provided.
+
 2: Added colliders and rigidbody to the pucks and the striker. Along with triggers on the carromboard collectors (holes).
+
 3: Striker Implementation:
    -> Made a circular sprite child to striker for force reference and also made the arrow helper gameobject child to the
       circle to denote the direction of striker release. 
+      
    -> For implementing the player striker movement, I thought of applying force to the striker using raycast2D, but
       after solving multiple errors, it was still not right in terms of the orientation of the force direction and the scale of
       circle and direction. 
+      
    -> So I surfed through the internet and found a better way by using only GetMouseButtonUp and 
       GetMouseButtonDown.
    -> With mouseDown, we can get the vector position where the player starts to drag the striker, and on mouseUp, we get
